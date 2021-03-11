@@ -1875,9 +1875,9 @@ def set_theme():
         }
     else:
         theme = {
-            'title'     : color['darkblue'],
-            'subtitle'  : color['blue'] + ansi['underline'],
-            'frame'     : color['darkblue'],
+            'title'     : ansi['default'],
+            'subtitle'  : ansi['default'],
+            'frame'     : color['darkgray'],
             'default'   : ansi['default'],
             'error'     : color['white'] + color['redbg'],
             'roundtrip' : color['darkblue'],
@@ -1885,14 +1885,14 @@ def set_theme():
             'input'     : color['darkgray'],
             'done_lo'   : color['white'],
             'done_hi'   : color['gray'],
-            'text_lo'   : color['gray'],
-            'text_hi'   : color['darkgray'],
-            'unit_lo'   : color['gray'],
-            'unit_hi'   : color['darkgray'],
-            'colors_lo' : (color['red'], color['yellow'], color['green'], color['blue'],
-                          color['cyan'], color['white'], color['darkred'], color['darkgreen']),
-            'colors_hi' : (color['darkred'], color['darkyellow'], color['darkgreen'], color['darkblue'],
-                          color['darkcyan'], color['gray'], color['red'], color['green']),
+            'text_lo'   : ansi['default'],
+            'text_hi'   : ansi['default'],
+            'unit_lo'   : ansi['default'],
+            'unit_hi'   : ansi['default'],
+            'colors_lo' : (ansi['default'], ansi['default'], ansi['default'], ansi['default'],
+                          color['yellow'], color['darkyellow'], color['red'], color['darkred']),
+            'colors_hi' : (ansi['default'], ansi['default'], ansi['default'], ansi['default'],
+                          color['yellow'], color['darkyellow'], color['red'], color['darkred']),
         }
     return theme
 
