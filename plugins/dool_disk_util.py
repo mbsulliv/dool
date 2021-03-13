@@ -75,9 +75,12 @@ class dstat_plugin(dstat):
     def extract(self):
         for l in self.splitlines():
             if len(l) < 13: continue
+            name = l[2]
+            self.set2[name] = dict(
+                tot_ticks = 0
+            )
             if l[5] == '0' and l[9] == '0': continue
             if l[3:14] == ['0',] * 11: continue
-            name = l[2]
             if name not in self.vars: continue
             self.set2[name] = dict(
                 tot_ticks = int(l[12])
