@@ -59,6 +59,9 @@ class dstat_plugin(dstat):
                 self.val['pid']         = pid
                 self.val['name']        = getnamebypid(pid, name)
 
+        if self.val['name'] == '\n':
+            self.val['name'] = ''
+
         if step == op.delay:
             self.pidset1 = self.pidset2
 
