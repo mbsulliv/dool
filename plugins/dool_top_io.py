@@ -61,6 +61,7 @@ class dstat_plugin(dstat):
 
         if self.val['name'] == '\n':
             self.val['name'] = ''
+            self.val['usage'] = 0.0
 
         if step == op.delay:
             self.pidset1 = self.pidset2
