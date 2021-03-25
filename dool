@@ -2828,9 +2828,9 @@ def perform(update):
         newline = ''
         if op.update:
             if step == 1 and update != 0:
-                newline = '\n' + ansi['reset'] + ansi['clearline'] + ansi['save']
+                newline = '\n' + ansi['reset']
             elif loop != 0:
-                newline = ansi['restore']
+                newline = '\r' + ansi['reset'] + ansi['clearline']
 
         ### Display header
         if showheader:
